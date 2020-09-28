@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Learning-React-Transition-Group/static/css/main.b2e3fd1a.chunk.css",
+    "main.js": "/Learning-React-Transition-Group/static/js/main.396d73f1.chunk.js",
+    "main.js.map": "/Learning-React-Transition-Group/static/js/main.396d73f1.chunk.js.map",
+    "runtime-main.js": "/Learning-React-Transition-Group/static/js/runtime-main.60df2f55.js",
+    "runtime-main.js.map": "/Learning-React-Transition-Group/static/js/runtime-main.60df2f55.js.map",
+    "static/js/2.d9bcad15.chunk.js": "/Learning-React-Transition-Group/static/js/2.d9bcad15.chunk.js",
+    "static/js/2.d9bcad15.chunk.js.map": "/Learning-React-Transition-Group/static/js/2.d9bcad15.chunk.js.map",
+    "index.html": "/Learning-React-Transition-Group/index.html",
+    "precache-manifest.d3e25ad578cebf5c94005a8b90301962.js": "/Learning-React-Transition-Group/precache-manifest.d3e25ad578cebf5c94005a8b90301962.js",
+    "service-worker.js": "/Learning-React-Transition-Group/service-worker.js",
+    "static/css/main.b2e3fd1a.chunk.css.map": "/Learning-React-Transition-Group/static/css/main.b2e3fd1a.chunk.css.map",
+    "static/js/2.d9bcad15.chunk.js.LICENSE.txt": "/Learning-React-Transition-Group/static/js/2.d9bcad15.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.60df2f55.js",
+    "static/js/2.d9bcad15.chunk.js",
+    "static/css/main.b2e3fd1a.chunk.css",
+    "static/js/main.396d73f1.chunk.js"
+  ]
+}
