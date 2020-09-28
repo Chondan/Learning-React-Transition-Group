@@ -1,13 +1,266 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.box {
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    transition: 1s all linear;
+}
+.box-entering {
+    border-color: blue;
+    transform: translate(250%, 0);
+}
+.box-entered {  
+    border-color: green;
+    transform: translate(500%, 0);
+}
+.box-exiting {
+    border-color: yellow;
+    transform: translate(250%, 0);
+}
+.box-exited {
+    border-color: red;
+    transform: translate(0, 0);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+button {
+    display: block;
+}
+
+/* CSSTransition */
+.msg {
+    border: 1px solid black;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 10px 0 0 0 ;
+}
+.msg+button {
+    color: red;
+}
+.msg-enter {
+    background-color: blue;
+    transform: translateX(0);
+}
+.msg-enter-active {
+    background-color: red;
+    transform: translateX(250%);
+    transition: all 2s linear;
+}
+.msg-enter-done {
+    background-color: pink;
+    transform: translateX(500%);
+    transition: all 2s linear;
+}
+.msg-exit {
+    background-color: green;
+    transform: translateX(500%);
+}
+.msg-exit-active {
+    background-color: yellow;
+    transform: translateX(250%);
+    transition: all 2s linear;
+}
+.msg-exit-done {
+    background-color: aqua;
+    transform: translateX(0%);
+    transition: all 2s linear;
+}
+.popup-msg {
+    margin: 20px;
+    position: relative;
+    width: 40vw;
+    height: 150px;
+}
+
+.popup-msg>button {
+    background-color: rgb(57, 57, 201);
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: absolute;
+    margin: 30px;
+}
+.popup-msg button:hover {
+    filter: brightness(0.8);
+}
+.popup-msg button:active {
+    box-shadow: 0 0 0 1px lightblue;
+}
+.message {
+    border: 1px solid rgb(182,182,235);
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    background-color: rgb(182,182,235);
+    border-radius: 2px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    visibility: hidden;
+    box-sizing: border-box;
+}
+.message>button {
+    background-color: rgb(57, 57, 201);
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin: 5px;
+}
+.message>p {
+    margin: 5px;
+}
+.message>p:first-child {
+    font-size: large;
+    font-weight: bolder;
+}
+
+/* CSSTransition */
+.message-container-enter {
+    opacity: 0;
+    transform: scale(0.9);
+}
+.message-container-enter-active {
+    opacity: 0.5;
+    transition: all 300ms ease-in-out;
+}
+.message-container-enter-done {
+    visibility: initial;
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+}
+.message-container-exit {
+    visibility: initial;
+    opacity: 1;
+}
+.message-container-exit-active {
+    opacity: 0.5;
+    visibility: hidden;
+    transform: scale(0.9);
+    transition: all 300ms ease-in-out;
+}
+.message-container-exit-done {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.9);
+    transition: all 300ms ease-in-out;
+}
+
+/* CSSTransition */
+.warp-enter {
+    opacity: 0;
+}
+.warp-active-enter {
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+.warp-exit {
+    opacity: 1;
+}
+.warp-active-exit {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+@media screen and (max-width: 500px) {
+    .popup-msg {
+        width: 90%;
+    }
+}
+
+/* SwitchTransition */
+.fade-exit {
+opacity: 1;
+color: red;
+}
+.fade-exit-active {
+    opacity: 0;
+}
+.fade-enter {
+    opacity: 0;
+    color: blue;
+}
+.fade-enter-active {
+    opacity: 1;
+}
+.fade-enter-active, .fade-exit-active {
+    transition: opacity 500ms;
+}
+.mode-example {
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.main button {
+    margin: 5px auto;
+}
+.example-btn-enter {
+    opacity: 0;
+    transform: translateX(-300%);
+}
+.example-btn-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+}
+.example-btn-exit {
+    opacity: 1;
+    transform: translateX(0);
+}
+.example-btn-exit-active {
+    opacity: 0;
+    transform: translateX(300%);
+}
+.example-btn-enter-active, .example-btn-exit-active {
+    transition: all 1s ease-in-out;
+}
+
+/* TransitionGroup */
+.todo-list-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.todo-list button {
+    display: inline-block;
+    margin-right: 5px;
+    color: white;
+    background-color: salmon;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.todo-list button:hover {
+    filter: brightness(0.7);
+}
+.todo-list button:active {
+    border: 1px solid black;
+}
+.todo-list-container>button {
+    margin: 10px;
+}
+.item {
+    border: 1px solid #ddd;
+    padding: 5px;
+    margin-top: -1px;
+}
+.item-enter {
+    opacity: 0;
+}
+.item-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+.item-exit {
+    opacity: 1;
+}
+.item-exit-active {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
 }
